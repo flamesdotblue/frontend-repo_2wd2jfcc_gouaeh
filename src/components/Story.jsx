@@ -21,7 +21,7 @@ const steps = [
 
 export default function Story() {
   return (
-    <section id="story" className="relative bg-gradient-to-b from-black to-[#140a0e] py-20">
+    <section id="story" className="relative bg-gradient-to-b from-black to-[#12080a] py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 flex items-center gap-3">
           <Crown className="h-6 w-6 text-yellow-300" />
@@ -31,7 +31,7 @@ export default function Story() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-4 top-0 hidden h-full w-0.5 bg-gradient-to-b from-yellow-500/60 to-transparent sm:block" />
+          <div className="absolute left-4 top-0 hidden h-full w-0.5 bg-gradient-to-b from-red-600/60 to-transparent sm:block" />
           <div className="space-y-10">
             {steps.map((s, i) => (
               <motion.div
@@ -46,8 +46,8 @@ export default function Story() {
                   {s.year}
                 </div>
                 <h3 className="text-xl font-bold text-white">{s.title}</h3>
-                <p className="mt-2 text-white/80">{s.text}</p>
-                <Shield className="absolute -left-4 top-6 hidden h-8 w-8 text-yellow-400 sm:block" />
+                <p className="mt-2 text-white/85">{s.text}</p>
+                <Shield className="absolute -left-4 top-6 hidden h-8 w-8 text-red-500 sm:block" />
               </motion.div>
             ))}
           </div>
@@ -59,11 +59,11 @@ export default function Story() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="mt-12 rounded-2xl border border-yellow-500/30 bg-gradient-to-r from-[#2a1a1f] to-[#1b1013] p-6 text-center"
+          className="mt-12 rounded-2xl border border-red-600/30 bg-gradient-to-r from-[#2d0b0c] to-[#170607] p-6 text-center"
         >
           <div className="mx-auto max-w-xl">
             <h4 className="text-lg font-bold text-white">Swear Fealty For Flavor</h4>
-            <p className="mt-1 text-white/80">
+            <p className="mt-1 text-white/85">
               Join the royal newsletter and unlock secret spicy proclamations.
             </p>
             <form
@@ -76,13 +76,13 @@ export default function Story() {
                   required
                   aria-label="Email address"
                   placeholder="you@thekingdom.com"
-                  className="w-full rounded-full border border-white/10 bg-black/50 px-4 py-3 text-white placeholder-white/40 outline-none ring-yellow-300/40 transition focus:border-yellow-400/50 focus:ring-2"
+                  className="w-full rounded-full border border-white/10 bg-black/50 px-4 py-3 text-white placeholder-white/40 outline-none ring-red-500/40 transition focus:border-red-500/50 focus:ring-2"
                 />
                 <Mail className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/40" />
               </div>
               <button
                 type="submit"
-                className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 to-amber-400 px-6 py-3 font-semibold text-black shadow hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-yellow-300/70 sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-red-600 via-red-500 to-yellow-400 px-6 py-3 font-semibold text-black shadow hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-yellow-300/70 sm:w-auto"
               >
                 Swear Fealty
               </button>

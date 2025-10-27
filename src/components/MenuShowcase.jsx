@@ -50,7 +50,7 @@ export default function MenuShowcase() {
           </div>
           <a
             href="#"
-            className="hidden rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-2 text-sm font-semibold text-yellow-300 transition hover:bg-yellow-500/20 md:inline-block"
+            className="hidden rounded-full border border-red-500/40 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-300 transition hover:bg-red-500/20 md:inline-block"
           >
             View Full Menu
           </a>
@@ -68,7 +68,7 @@ export default function MenuShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mt-10 rounded-2xl border border-yellow-500/20 bg-gradient-to-r from-[#2a1a1f] to-[#1f1418] p-6 text-center text-yellow-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+          className="mt-10 rounded-2xl border border-yellow-500/20 bg-gradient-to-r from-[#2b0f10] via-[#1d0b0c] to-[#140708] p-6 text-center text-yellow-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
         >
           <p className="text-sm">
             Combo Deals: Any 3 for <span className="font-bold text-yellow-300">$14</span> · Any 6 for <span className="font-bold text-yellow-300">$26</span>
@@ -106,19 +106,19 @@ function Card({ item, index }) {
           <div className="p-4">
             <h3 className="text-lg font-bold text-white">{item.name}</h3>
             <p className="mt-1 text-sm text-white/70">${item.price.toFixed(2)}</p>
-            <div className="mt-4 inline-flex rounded-full bg-yellow-500/10 px-3 py-1 text-xs font-semibold text-yellow-300">
+            <div className="mt-4 inline-flex rounded-full bg-gradient-to-r from-red-600/20 to-yellow-400/20 px-3 py-1 text-xs font-semibold text-yellow-300">
               {item.heat} Heat
             </div>
           </div>
         </div>
         {/* Back */}
-        <div className="absolute inset-0 rotate-y-180 rounded-2xl bg-gradient-to-b from-[#2b1a1f] to-black p-4 [backface-visibility:hidden]">
+        <div className="absolute inset-0 rotate-y-180 rounded-2xl bg-gradient-to-b from-[#3a0f12] via-[#1e0b0c] to-black p-4 [backface-visibility:hidden]">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-yellow-300">
             Ingredients
           </h4>
-          <p className="mt-2 text-sm text-white/80">{item.ingredients}</p>
+          <p className="mt-2 text-sm text-white/85">{item.ingredients}</p>
           <div className="absolute bottom-3 left-4 right-4">
-            <button className="w-full rounded-xl bg-gradient-to-r from-yellow-500 to-amber-400 py-2 text-sm font-bold text-black shadow hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-yellow-300/70">
+            <button className="w-full rounded-xl bg-gradient-to-r from-red-600 via-red-500 to-yellow-400 py-2 text-sm font-bold text-black shadow hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-yellow-300/70">
               Add to Order
             </button>
           </div>

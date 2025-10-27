@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Crown, Star, ShoppingBag, Sparkles } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 const reviews = [
   { source: "The Daily Feast", quote: "A royal decree of deliciousness." },
@@ -10,19 +11,17 @@ const reviews = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#1a0d12] via-[#12080c] to-black">
-      {/* Cinematic background image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1695740633675-d060b607f5c4?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxjZXJhbWljJTIwcG90dGVyeSUyMGhhbmRtYWRlfGVufDB8MHx8fDE3NjE1MDAxMzd8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "saturate(1.1) contrast(1.05)",
-          opacity: 0.28,
-        }}
-      />
+    <section className="relative overflow-hidden bg-black">
+      {/* Immersive Spline background */}
+      <div className="absolute inset-0">
+        <Spline
+          scene="https://prod.spline.design/cEecEwR6Ehj4iT8T/scene.splinecode"
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+
+      {/* Subtle dark vignette for readability */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.35)_55%,rgba(0,0,0,0.75)_100%)]" />
 
       {/* Golden sparkle particles */}
       <div className="pointer-events-none absolute inset-0">
@@ -36,7 +35,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1 text-xs font-medium uppercase tracking-widest text-yellow-300"
+          className="inline-flex items-center gap-2 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-4 py-1 text-xs font-medium uppercase tracking-widest text-yellow-300"
         >
           <Crown className="h-4 w-4" />
           CTK Empanadas
@@ -55,7 +54,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.25, duration: 0.8 }}
-          className="mx-auto mt-5 max-w-2xl text-base text-white/80 sm:text-lg"
+          className="mx-auto mt-5 max-w-2xl text-base text-white/85 sm:text-lg"
         >
           Hunger is the enemy. CTK is the cure. Surrender to the golden crust and
           rise a champion of taste.
@@ -69,7 +68,7 @@ export default function Hero() {
         >
           <a
             href="#menu"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-yellow-500 to-amber-400 px-7 py-3 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_rgba(234,179,8,0.8)] transition hover:scale-[1.02] hover:shadow-[0_14px_40px_-12px_rgba(234,179,8,0.9)] focus:outline-none focus:ring-2 focus:ring-yellow-300/70"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-red-600 via-red-500 to-yellow-400 px-7 py-3 text-sm font-semibold text-black shadow-[0_10px_30px_-10px_rgba(234,179,8,0.8)] transition hover:scale-[1.02] hover:shadow-[0_14px_40px_-12px_rgba(234,179,8,0.9)] focus:outline-none focus:ring-2 focus:ring-yellow-300/70"
           >
             <ShoppingBag className="h-4 w-4" /> Order Now
           </a>
@@ -120,7 +119,3 @@ function Sparkle({ index }) {
     </motion.span>
   );
 }
-
-/* Tailwind utilities for marquee */
-// This style block is safe in JSX via a style tag at document root, but here we rely on global CSS.
-// Add the required keyframes to the page via a small inline style in App component. 
